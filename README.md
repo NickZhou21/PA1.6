@@ -33,4 +33,14 @@ The autograder checks the following aspects of your work for each push to GitHub
 
 This assignment is due on 10:45, Wednesday, October 7, 2026.
 
+## Optional Monte Carlo analysis
+
+Run multiple simulations with consecutive random seeds from the scenario's `sim.seed` value:
+
+```bash
+python main.py --scenario scenarios/cold_morning.yaml --monte-carlo 20
+```
+
+At least two runs are required. Per-run metrics and aggregate means, standard deviations, minima, and maxima are saved as CSV files in `outputs/logs`. A Monte Carlo figure is saved in `outputs/figures`, showing the temperature ensemble and the per-seed heater-duty and RMSE distributions.
+
 > By Tom van Woudenberg and Stanislaw Ostyk-Narbutt, Delft University of Technology. CC BY 4.0, more info [on the Credits page of Workbook](https://mude.citg.tudelft.nl/workbook-2026/credits.html).
